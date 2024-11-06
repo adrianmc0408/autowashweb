@@ -20,22 +20,8 @@ const Home8Main = () => {
   return (
     <main>
       <Hero8 />
-      <Services2 service={2} />
-      <PinkColor />
-      <Projects2 project={2} />
-      <Features2 />
-      <About2 />
-      <CounterUp />
-      <Team2 />
-      <Skills title={"Creative Agency Solutions."} type={2} />
-      <Testimonials />
-      <CallToAction
-        title={"Need an outstanding and successful awesome project?"}
-        label={"Let's Work Together"}
-      />
-      <Contact1 pt={true} />
-      <Brands />
-      <Blogs blogsType={2} />
+      <Services2 service={2} id="servicios" />
+      <Contact1 pt={true} id="contacto" />
     </main>
   );
 };

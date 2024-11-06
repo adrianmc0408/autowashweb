@@ -4,26 +4,24 @@ import React from "react";
 const Copyright2 = ({ style, copyright }) => {
   return (
     <div
-      className={`copyright copyright--${
-        style === 3 && !copyright ? style + 1 : copyright === 2 ? 2 : style
-      } `}
+      className={`copyright copyright--${style === 3 && !copyright ? style + 1 : copyright === 2 ? 2 : style
+        } `}
     >
       <div className="container">
         <div className="row row align-items-center">
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <div
-              className={`copyright__left ${
-                style === 4 ? "" : "copyright__left--2 "
-              }`}
+              className={`copyright__left ${style === 4 ? "" : "copyright__left--2 "
+                }`}
             >
               <p>
                 Copyright © 2024{" "}
                 {style === 3 && !copyright ? (
-                  "BASTUN."
+                  "AutoWash Boxes."
                 ) : (
-                  <a href="/">BASTUN.</a>
+                  <a href="/">AutoWash Boxes.</a>
                 )}{" "}
-                All Right Reserved
+                Todos los derechos reservados
               </p>
             </div>
           </div>
@@ -34,13 +32,24 @@ const Copyright2 = ({ style, copyright }) => {
               <div className="copyright__right">
                 <ul>
                   <li>
-                    <a href="#">Privacy & Policy</a>
+                    <a href="#">Política de privacidad</a>
                   </li>{" "}
                   <li>
                     <a href="#">||</a>
                   </li>{" "}
                   <li>
-                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Términos y condiciones</a>
+                  </li>
+                  <br>
+                  </br>
+                  <li>
+                    <a href="#">Política de cookies</a>
+                  </li>{" "}
+                  <li>
+                    <a href="#">||</a>
+                  </li>{" "}
+                  <li>
+                    <a href="#">Declaración de accesibilidad</a>
                   </li>
                 </ul>
               </div>

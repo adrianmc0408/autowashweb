@@ -9,10 +9,9 @@ const Contact1 = ({ pt, type, pb }) => {
 
   return (
     <div
-      className={`contact ${
-        pb ? "sp_bottom_200" : type === 2 ? "sp_bottom_120" : "sp_bottom_140"
-      } ${pt ? "sp_top_140" : ""}`}
-      id="tb__contact"
+      className={`contact ${pb ? "sp_bottom_200" : type === 2 ? "sp_bottom_120" : "sp_bottom_140"
+        } ${pt ? "sp_top_140" : ""}`}
+      id="contacto"
     >
       <div className="container">
         <div className="row">
@@ -22,9 +21,8 @@ const Contact1 = ({ pt, type, pb }) => {
             data-aos-duration="1500"
           >
             <div
-              className={`section__title text-center sp_bottom_70 ${
-                bodyBg === "black" ? "section__title--3" : ""
-              }`}
+              className={`section__title text-center sp_bottom_70 ${bodyBg === "black" ? "section__title--3" : ""
+                }`}
             >
               {type === 3 ? (
                 <div className="section__title__button">
@@ -36,92 +34,19 @@ const Contact1 = ({ pt, type, pb }) => {
                 </div>
               ) : (
                 <div className="section__title__button">
-                  <span className="text__gradient">Contact Us</span>
+                  <span className="text__gradient">Contacto</span>
                 </div>
               )}
 
               <div className="section__title__heading">
-                <h3>CONSULTING SUPPORT IS JUST A CALL OR EMAIL AWAY.</h3>
+                <h3>Contacta para obtener el asesoramiento necesario para dejar tu vehículo impoluto</h3>
               </div>
             </div>
           </div>
 
-          <div
-            className="col-xl-7 col-lg-7 col-md-12 col-sm-12"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <div className="contact__input__wrapper">
-              <div className="row">
-                <div className="col-xl-6">
-                  <div className="contact__input">
-                    <input
-                      className="contact__common__input"
-                      type="text"
-                      placeholder="First Name"
-                    />
-                  </div>
-                </div>
-                <div className="col-xl-6">
-                  <div className="contact__input">
-                    <input
-                      className="contact__common__input"
-                      type="text"
-                      placeholder="Last Name"
-                    />
-                  </div>
-                </div>
-                <div className="col-xl-6">
-                  <div className="contact__input">
-                    <input
-                      className="contact__common__input"
-                      type="text"
-                      placeholder="Email"
-                    />
-                  </div>
-                </div>
-                <div className="col-xl-6">
-                  <div className="contact__input">
-                    <input
-                      className="contact__common__input"
-                      type="text"
-                      placeholder="password"
-                    />
-                  </div>
-                </div>
-                <div className="col-xl-12">
-                  <select
-                    className="contact__common__input"
-                    name="cars"
-                    id="cars"
-                  >
-                    <option defaultValue="volvo">Subject:</option>
-                    <option defaultValue="saab">Saab</option>
-                    <option defaultValue="mercedes">Mercedes</option>
-                    <option defaultValue="audi">Audi</option>
-                  </select>
-                </div>
-                <div className="col-xl-12">
-                  <textarea
-                    className="contact__common__input"
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    defaultValue={"write a message...."}
-                  />
-                </div>
-                <div className="col-xl-12">
-                  <div className="contact__button">
-                    <ButtonPrimary text="SEND MESSAGE" type={"submit"} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div
-            className="col-xl-5 col-lg-5 col-md-12 col-sm-12 contact__info__right"
+            className="col-xl-12 col-lg-12 col-md-12 col-sm-12 contact__info__right"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
@@ -183,9 +108,11 @@ const Contact1 = ({ pt, type, pb }) => {
                   </span>
                 </div>
                 <div className="contact__text">
-                  <h6>Hours:</h6>
-                  <p>Monday - Friday: 8 AM - 5:30 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
+                  <h6>Horario:</h6>
+                  <p>Mañana: 9:00 - 14:00</p>
+                  <p>Tarde: 16:00 - 20:00</p>
+                  <p>Sabado : 9:00 - 14:00</p>
+                  <p>Domingo: Cerrado</p>
                 </div>
               </div>
 
@@ -262,9 +189,9 @@ const Contact1 = ({ pt, type, pb }) => {
                   </span>
                 </div>
                 <div className="contact__text">
-                  <h6>Call Us:</h6>
-                  <p>(+000) 987-3267</p>
-                  <p>+88 568 956 238</p>
+                  <h6>Contacto:</h6>
+                  <p>640 188 935</p>
+                  <p>autowashboxes@gmail.com</p>
                 </div>
               </div>
 
@@ -320,18 +247,11 @@ const Contact1 = ({ pt, type, pb }) => {
                   </span>
                 </div>
                 <div className="contact__text">
-                  <h6>Location:</h6>
-                  <p>242 Carlyle RdZebulon,</p>
-                  <p>North Carolina(NC), 27597</p>
+                  <h6>Dirección:</h6>
+                  <p>Calle los Madroños 33</p>
+                  <p>Torrejón de Velasco</p>
                 </div>
               </div>
-            </div>
-            <div
-              className="contact__img"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-            >
-              <Image src={contactImage} alt="" />
             </div>
           </div>
         </div>

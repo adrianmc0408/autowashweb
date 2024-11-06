@@ -7,7 +7,7 @@ const Copyright = () => {
         <div className="col-xl-6 col-lg-6 col-md-6 col-12">
           <div className="copyright__left">
             <p>
-              Copyright © 2024 <Link href="/">BASTUN.</Link> All Right Reserved
+              Copyright © 2024 <Link href="/">AutoWash Boxes.</Link> Todos los derechos reservados
             </p>
           </div>
         </div>
@@ -15,10 +15,16 @@ const Copyright = () => {
           <div className="copyright__right">
             <ul>
               <li>
-                <Link href="#">Privacy & Policy ||</Link>
+                <Link href="#">Política de privacidad ||</Link>
               </li>{" "}
               <li>
-                <Link href="#">Terms & Conditions</Link>
+                <Link href="#">Términos y condiciones ||</Link>
+              </li>
+              <li>
+                <Link href="#">Política de cookies ||</Link>
+              </li>
+              <li>
+                <Link href="#">Declaración de accesibilidad</Link>
               </li>
             </ul>
           </div>

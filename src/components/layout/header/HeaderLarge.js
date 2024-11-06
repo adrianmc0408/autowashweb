@@ -7,14 +7,12 @@ const HeaderLarge = () => {
   const { style, headerType } = useHeaderContex();
   return (
     <div
-      className={`${
-        headerType === 3 ? "container-fluid  full__width__padding" : "container"
-      }  ${style === 4 ? "" : "desktop__menu__wrapper"} `}
+      className={`${headerType === 3 ? "container-fluid  full__width__padding" : "container"
+        }  ${style === 4 ? "" : "desktop__menu__wrapper"} `}
     >
       <div
-        className={`headerarea__main__wrapper position-relative ${
-          !style ? "" : `headerarea__main__wrapper--${style}`
-        } `}
+        className={`headerarea__main__wrapper position-relative ${!style ? "" : `headerarea__main__wrapper--${style}`
+          } `}
       >
         <div className="headerarea__component__wrap">
           {/* logo area */}

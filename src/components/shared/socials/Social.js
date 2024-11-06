@@ -2,27 +2,27 @@ const Social = ({ children, type }) => {
   const icons = [
     {
       name: "facebook",
-      path: "https://www.facebook.com",
+      path: "https://www.facebook.com/autowashboxes",
     },
     {
       name: "twitter",
-      path: "https://x.com",
+      path: "https://x.com/AutoWashBoxes",
     },
 
     {
-      name: "skype",
-      path: "https://www.skype.com",
-    },
+      name: "instagram",
+      path: "https://www.instagram.com/autowashboxes/",
+    }
+    ,
     {
-      name: "linkedin",
-      path: "https://www.linkedin.com",
-    },
+      name: "whatsapp",
+      path: "https://api.whatsapp.com/send?phone=34640188935",
+    }
   ];
   return (
     <div
-      className={`headerarea__icon ${
-        type === "copyright" ? "copyright__icon" : ""
-      }`}
+      className={`headerarea__icon ${type === "copyright" ? "copyright__icon" : ""
+        }`}
     >
       <ul>
         {icons.map(({ name, path }, idx) => (

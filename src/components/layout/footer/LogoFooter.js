@@ -12,7 +12,7 @@ const LogoFooter = ({ style }) => {
     >
       <div
         className="footer__widget footer__left position-relative "
-        // style={{ zIndex: 10 }}
+      // style={{ zIndex: 10 }}
       >
         <div className="footer__logo">
           {style === 2 ? (
@@ -26,8 +26,7 @@ const LogoFooter = ({ style }) => {
         </div>
         <div className="footer__text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt labore et dolore magna aliqua
+            Bienvenidos al mejor lavadero de Madrid Sur
           </p>
         </div>
         <div className="footer__icon">

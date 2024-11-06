@@ -8,9 +8,8 @@ const OfferedServices = ({ service, pb }) => {
   const services = getAllServices()?.slice(6, 10);
   return (
     <div
-      className={`service sp_top_140 special__spacing ${
-        pb ? pb : "sp_bottom_330"
-      }`}
+      className={`service sp_top_140 special__spacing ${pb ? pb : "sp_bottom_330"
+        }`}
       id="service__area"
       style={{ background: `var(--pinkcolor) url('${serviceBgImage.src}')` }}
       data-aos="fade-up"
@@ -21,7 +20,7 @@ const OfferedServices = ({ service, pb }) => {
             <div className="section__title text-center sp_bottom_90">
               {service === 2 ? (
                 <div className="section__title__button">
-                  <span>Our Service</span>
+                  <span>Nuestros Servicios</span>
                 </div>
               ) : (
                 ""

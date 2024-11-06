@@ -8,15 +8,9 @@ import { useSearchParams } from "next/navigation";
 import Nodata from "@/components/shared/no-data/Nodata";
 
 const Services2 = ({ all, service, type, title, pt, pb, isBg, isNotTitle }) => {
-  const currentCategory = useSearchParams().get("category");
+  const currentCategory = "lavadero"
   const allServices = getAllServices();
-  const services = allServices
-    ?.slice(all ? 0 : 10, all ? 6 : 13)
-    .filter(({ category }) =>
-      currentCategory
-        ? category.toLowerCase().split(" ").join("-") === currentCategory
-        : true
-    );
+  const services = allServices.filter((service) => service.category === currentCategory);
   return (
     <div
       className="service__video__sec__wrap"
@@ -24,28 +18,25 @@ const Services2 = ({ all, service, type, title, pt, pb, isBg, isNotTitle }) => {
         service === 2 && !isBg
           ? {}
           : {
-              background: `var(--pinkcolor) url('${
-                type === 2 ? serviceBgImage5.src : serviceBgImage2.src
+            background: `var(--pinkcolor) url('${type === 2 ? serviceBgImage5.src : serviceBgImage2.src
               }')`,
-            }
+          }
       }
     >
       {/* service__section__start --> */}
       <div
-        className={`service__2   special__spacing ${
-          pt || pb
-            ? pt && pt
-              ? `${pt} ${pb}`
-              : pt
+        className={`service__2   special__spacing ${pt || pb
+          ? pt && pt
+            ? `${pt} ${pb}`
+            : pt
               ? pt
               : pb
-            : service === 2
-            ? `${
-                isBg ? "sp_top_140 sp_bottom_70" : "ssp_bottom_100 sp_top_80 "
-              }`
+          : service === 2
+            ? `${isBg ? "sp_top_140 sp_bottom_70" : "ssp_bottom_100 sp_top_80 "
+            }`
             : "sp_bottom_70 sp_top_140"
-        }`}
-        id="service__area"
+          }`}
+        id="servicios"
       >
         <div className="container">
           {isNotTitle ? (
@@ -55,10 +46,10 @@ const Services2 = ({ all, service, type, title, pt, pb, isBg, isNotTitle }) => {
               <div className="col-xl-12">
                 <div className="section__title text-center sp_bottom_50">
                   <div className="section__title__button">
-                    <span className="text__gradient">Our Service</span>
+                    <span className="text__gradient">Nuestros Servicios</span>
                   </div>
                   <div className="section__title__heading">
-                    <h3>{title ? title : "WE OFFER CONSULTANCY SERVICES."}</h3>
+                    <h3>{title ? title : "Ofrecemos servicios de limpieza de vehículos y mobiliario"}</h3>
                   </div>
                 </div>
               </div>

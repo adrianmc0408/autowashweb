@@ -16,29 +16,25 @@ const Footer = ({ style, footerBg, copyright }) => {
   return (
     <>
       <div
-        className={`${
-          !style
-            ? "footer pink__bg__color  sp_top_250"
-            : `footer__${style} ${
-                style === 3 && footerBg === "black"
-                  ? "sp_top_200"
-                  : " sp_top_140"
-              } `
-        } ${style === 4 ? "sp_bottom_140" : ""}  position-relative ${
-          footerBg === "black" ? "bg__black" : ""
-        }`}
+        className={`${!style
+          ? "footer pink__bg__color  sp_top_250"
+          : `footer__${style} ${style === 3 && footerBg === "black"
+            ? "sp_top_200"
+            : " sp_top_140"
+          } `
+          } ${style === 4 ? "sp_bottom_140" : ""}  position-relative ${footerBg === "black" ? "bg__black" : ""
+          }`}
         id={!style ? `footer__area` : `footer__area__${style} `}
         style={
           !style || style === 2 || style === 4
             ? {
-                backgroundImage: `url('${
-                  !style
-                    ? footerImage1.src
-                    : style === 2
-                    ? footerImage2.src
-                    : footerImage3.src
+              backgroundImage: `url('${!style
+                ? footerImage1.src
+                : style === 2
+                  ? footerImage2.src
+                  : footerImage3.src
                 }')`,
-              }
+            }
             : {}
         }
       >
@@ -57,14 +53,6 @@ const Footer = ({ style, footerBg, copyright }) => {
             </div>
           ) : (
             <div className="footer__wrapper sp_bottom_110">
-              <div className="row">
-                <LogoFooter style={style} />
-                {!style ? <SupportFooter /> : ""}
-
-                <LinksFooter style={style} />
-                <NewsLetter style={style} />
-                {!style ? "" : <GalleryFooter />}
-              </div>
             </div>
           )}
 

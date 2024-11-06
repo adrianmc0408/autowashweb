@@ -1,0 +1,24 @@
+.containerImg {
+    position: relative; /* We need this for the background image's positioning */
+    overflow: hidden; /* We don't want all blurry image to be all visible. Only the part inside the parent. */
+    display: flex;
+    align-items: center; /* We want our blurry background to be centred */
+  }
+  
+  .background {
+    filter: blur(8px); /* You can set the blur of background. It's up to you. */
+    z-index: 1; /* We want our blurry background to be in the background. */
+    position: absolute; /* We want to stack images on top of each other */
+    width: 100%;
+     /* We want the background same width as the parent */
+  }
+  
+  .front-image {
+    z-index:2;
+    width: 100%; /* We want to make it the same width as the parent because... */
+    object-fit: contain; /* when we set it to contain, it will be centred in the middle. */
+    max-height: 300px; /* You can set this however you like. Your image may be wide or tall but it will always be at most this threshold. At this point, our blurry background starts to become visible. */
+  }
+  .cardContentText{
+    height: 18rem;
+  }

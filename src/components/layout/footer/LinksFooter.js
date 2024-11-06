@@ -3,37 +3,28 @@ import Link from "next/link";
 const LinksFooter = ({ style }) => {
   const items = [
     {
-      name: "Privacy & policy",
+      name: "Términos y condiciones",
       path: "#",
     },
     {
-      name: "Terms & conditions",
+      name: "Política de privacidad",
       path: "#",
     },
     {
-      name: "FAQ",
-      path: "/faq",
-    },
-    {
-      name: "Customer support",
-      path: "/contact",
-    },
-    {
-      name: "Contact us",
-      path: "/contact",
-    },
+      name: "Política de privacidad",
+      path: "#",
+    }
   ];
   return (
     <div
-      className={`col-xl-2 ${
-        !style ? "col-lg-6" : "col-lg-2"
-      } col-md-6 col-sm-6`}
+      className={`col-xl-6 ${!style ? "col-lg-6" : "col-lg-2"
+        } col-md-6 col-sm-6`}
       data-aos="fade-up"
       data-aos-duration="2500"
     >
       <div className="footer__widget footer__quick">
         <div className="footer__menu__title">
-          <h6>QUICK LINKS :</h6>
+          <h6>LINKS :</h6>
         </div>
         <div className="footer__menu">
           <ul>

@@ -1,18 +1,18 @@
 import Image from "next/image";
-import brandImage4 from "@/assets/img/brand/brand__4.png";
+import brandImage4 from "@/assets/img/logo/logo_7.png";
 
 const HeaderAnimate = () => {
   const items = [
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
-    { name: "LEGAL CONSULTING", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
+    { name: "AUTOWASH BOXES", img: brandImage4 },
   ];
   return (
     <div className="header__animate">

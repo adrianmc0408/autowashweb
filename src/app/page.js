@@ -1,12 +1,23 @@
-import IndexMain from "@/components/layout/main/IndexMain";
+
+import Home8Main from "@/components/layout/main/Home8Main";
 import ThemeController from "@/components/shared/others/ThemeController";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
-
-export default function Home() {
+export const metadata = {
+  title: "AutoWash Boxes",
+  description: "AutoWash Boxes",
+};
+export default function Home8Onepage() {
   return (
-    <PageWrapper>
+    <PageWrapper
+      headerStyle={3}
+      headerBg={"black"}
+      footerStyle={2}
+      isOnepage={true}
+      headerType={3}
+    >
       <ThemeController />
-      <IndexMain />
+      <Home8Main />
     </PageWrapper>
   );
 }
+

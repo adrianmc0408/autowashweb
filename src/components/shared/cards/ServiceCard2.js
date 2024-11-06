@@ -5,12 +5,11 @@ import { useSearchParams } from "next/navigation";
 
 const ServiceCard2 = ({ service, type }) => {
   const currentCategory = useSearchParams().get("category");
-  const { title, img, id, duration, desc } = service;
+  const { title, img, id, duration, desc, name } = service;
   return (
     <div
-      className={`${
-        currentCategory ? "col-xl-3" : "col-xl-4"
-      }  col-lg-4 col-md-6 col-sm-6 col-12`}
+      className={`${currentCategory ? "col-xl-6" : "col-xl-6"
+        }  col-lg-6 col-md-6 col-sm-6 col-12`}
       data-aos="fade-up"
       data-aos-duration={duration}
     >
@@ -50,7 +49,7 @@ const ServiceCard2 = ({ service, type }) => {
           <div className="service__content">
             <div className="service__heading">
               <h5 className="text-uppercase">
-                <Link href={`/services/${id}`}>
+                <Link href={`/services/${name}`}>
                   {currentCategory ? title?.slice(0, 13) : title?.slice(0, 20)}
                 </Link>
               </h5>
@@ -61,10 +60,9 @@ const ServiceCard2 = ({ service, type }) => {
           </div>
           <div className="service__icon service__icon--2">
             <Link
-              className={`direction__btn  ${
-                type === 2 ? "" : "direction__btn--2"
-              }`}
-              href={`/services/${id}`}
+              className={`direction__btn  ${type === 2 ? "" : "direction__btn--2"
+                }`}
+              href={`/services/${name}`}
             >
               <svg
                 width="34"
