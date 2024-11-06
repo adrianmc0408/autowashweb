@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoImag1 from "@/assets/img/logo/Logo_1.png";
-import logoImag2 from "@/assets/img/logo/Logo_2.png";
+import logoImag1 from "@/assets/img/logo/logo_1.png";
+import logoImag2 from "@/assets/img/logo/logo_2.png";
 
 const LogoFooter = ({ style }) => {
   return (
