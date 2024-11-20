@@ -42,8 +42,8 @@ const CartContextProvider = ({ children }) => {
 
     if (!cartProductFromLocalStorage) {
       setCartProducts(demoProducts);
-      addItemsToLocalstorage("cart", demoProducts);
-    } else [setCartProducts(cartProductFromLocalStorage)];
+      //addItemsToLocalstorage("cart", demoProducts);
+    } else[setCartProducts(cartProductFromLocalStorage)];
   }, []);
   // add  product from localstorage cart
   const addProductToCart = (currentProduct, isDecreament, isTotalQuantity) => {
@@ -59,12 +59,12 @@ const CartContextProvider = ({ children }) => {
     if (isTotalQuantity) {
       currentProducts = cartProducts?.map((product) =>
         product.id === currentId &&
-        product?.title === currentTitle &&
-        isTotalQuantity
+          product?.title === currentTitle &&
+          isTotalQuantity
           ? {
-              ...product,
-              quantity: currentProduct.quantity,
-            }
+            ...product,
+            quantity: currentProduct.quantity,
+          }
           : product
       );
 
@@ -79,18 +79,18 @@ const CartContextProvider = ({ children }) => {
       if (isAlreadyExist) {
         currentProducts = cartProducts?.map((product) =>
           product.id === currentId &&
-          product?.title === currentTitle &&
-          isDecreament
+            product?.title === currentTitle &&
+            isDecreament
             ? {
-                ...product,
-                quantity: product.quantity - currentProduct?.quantity,
-              }
+              ...product,
+              quantity: product.quantity - currentProduct?.quantity,
+            }
             : product.id === currentId && product?.title === currentTitle
-            ? {
+              ? {
                 ...product,
                 quantity: product.quantity + currentProduct?.quantity,
               }
-            : product
+              : product
         );
         if (isDecreament) {
           creteAlert("success", "Success! Quantity decreased.");
@@ -104,7 +104,7 @@ const CartContextProvider = ({ children }) => {
       }
     }
     setCartProducts(currentProducts);
-    addItemsToLocalstorage("cart", currentProducts);
+    //addItemsToLocalstorage("cart", currentProducts);
   };
 
   // delete product from localstorage cart
@@ -113,7 +113,7 @@ const CartContextProvider = ({ children }) => {
       ({ id, title }) => id !== currentId || title !== currentTitle
     );
     setCartProducts(currentProducts);
-    addItemsToLocalstorage("cart", currentProducts);
+    //addItemsToLocalstorage("cart", currentProducts);
     creteAlert("success", "Success! deleted from cart.");
   };
   return (

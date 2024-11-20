@@ -19,8 +19,8 @@ const WishlistContextProvider = ({ children }) => {
 
     if (!wishlistProductFromLocalStorage) {
       setWishlistProducts(demoProducts);
-      addItemsToLocalstorage("wishlist", demoProducts);
-    } else [setWishlistProducts(wishlistProductFromLocalStorage)];
+      //addItemsToLocalstorage("wishlist", demoProducts);
+    } else[setWishlistProducts(wishlistProductFromLocalStorage)];
   }, []);
   // add  product from localstorage cart
   const addProductToWishlist = (currentProduct) => {
@@ -37,7 +37,7 @@ const WishlistContextProvider = ({ children }) => {
     } else {
       let currentProducts = [...wishlistProducts, currentProduct];
       setWishlistProducts(currentProducts);
-      addItemsToLocalstorage("wishlist", currentProducts);
+      //addItemsToLocalstorage("wishlist", currentProducts);
       creteAlert("success", "Success! added to wishlist.");
     }
   };
@@ -48,7 +48,7 @@ const WishlistContextProvider = ({ children }) => {
       ({ id, title }) => id !== currentId || title !== currentTitle
     );
     setWishlistProducts(currentProducts);
-    addItemsToLocalstorage("wishlist", currentProducts);
+    //addItemsToLocalstorage("wishlist", currentProducts);
     creteAlert("success", "Success! deleted from wishlist.");
   };
   return (
