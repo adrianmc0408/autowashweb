@@ -111,7 +111,7 @@ const Contact1 = ({ pt, type, pb }) => {
                   <h6>Horario:</h6>
                   <p>Mañana: 9:00 - 14:00</p>
                   <p>Tarde: 16:00 - 20:00</p>
-                  <p>Sabado : 9:00 - 14:00</p>
+                  <p>Sabado : Cerrado</p>
                   <p>Domingo: Cerrado</p>
                 </div>
               </div>
