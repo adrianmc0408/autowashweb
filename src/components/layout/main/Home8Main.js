@@ -15,6 +15,8 @@ import Services2 from "@/components/sections/services/Services2";
 import About2 from "@/components/sections/about/About2";
 import Team2 from "@/components/sections/team/Team2";
 import CallToAction from "@/components/sections/CallToActions/CallToAction";
+import Social from "@/components/shared/socials/Social";
+import SocialHeader from "../header/SocialHeader";
 const Home8Main = () => {
   const { isOnepage } = useHeaderContex();
   return (

@@ -10785,6 +10785,9 @@ Grid Area
 .copyright__left.copyright__left--2 p a {
   color: var(--violet);
 }
+.textosLegales {
+  color: var(--whiteColor) !important
+}
 .copyright__left p {
   font-weight: 400;
   line-height: 40px;

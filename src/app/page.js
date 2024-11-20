@@ -14,6 +14,7 @@ export default function Home8Onepage() {
       footerStyle={2}
       isOnepage={true}
       headerType={3}
+      copyright={2}
     >
       <ThemeController />
       <Home8Main />

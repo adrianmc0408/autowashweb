@@ -26,8 +26,11 @@ const Copyright2 = ({ style, copyright }) => {
             </div>
           </div>
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            {style === 4 ? (
-              <Social type="copyright" />
+            {style === 4 || style === 2 ? (
+              <>
+                <Social type="copyright" />
+
+              </>
             ) : (
               <div className="copyright__right">
                 <ul>

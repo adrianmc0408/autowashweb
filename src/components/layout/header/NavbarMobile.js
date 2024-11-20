@@ -1,36 +1,96 @@
 import Link from "next/link";
 import ItemMobile from "./ItemMobile";
 import { useHeaderContex } from "@/providers/HeaderContex";
+import { usePathname } from 'next/navigation';
+
 
 const NavbarMobile = () => {
   const { isOnepage, style, headerType, isCollection, home } =
     useHeaderContex();
-  const mobileItems = [
+  const pathName = usePathname()
+  const navItemsHome = [
     {
       name: "Inicio",
-      toggler: true,
+      icon: false,
       path: "#",
-      dropdown: false,
-      nestedDropdown: false,
-      dropdownItems: []
+      dropdown: null,
+      position: "static",
     },
     {
       name: "Servicios",
-      toggler: true,
+      icon: false,
       path: "#servicios",
-      dropdown: false,
-      nestedDropdown: false,
-      dropdownItems: []
+      dropdown: null,
+      position: "static",
     },
     {
       name: "Contacto",
-      toggler: true,
+      icon: false,
       path: "#contacto",
-      dropdown: false,
-      nestedDropdown: false,
-      dropdownItems: []
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Galería",
+      icon: false,
+      path: "/services/galeria",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Textos legales",
+      icon: false,
+      path: "/textosLegales",
+      dropdown: null,
+      position: "static",
+    },
+  ]
+  const navItemsServices = [
+    {
+      name: "Inicio",
+      icon: false,
+      path: "/",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Limpieza de coches",
+      icon: false,
+      path: "/services/limpiezaCoches",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Limpieza de sofás",
+      icon: false,
+      path: "/services/limpiezaSofas",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Galería",
+      path: "/services/galeria",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Textos legales",
+      icon: false,
+      path: "/textosLegales",
+      dropdown: null,
+      position: "static",
+    },
+  ]
+  const navItemsTextos = [
+    {
+      name: "Inicio",
+      icon: false,
+      path: "/",
+      dropdown: null,
+      position: "static",
     }
   ]
+  const mobileItems = pathName.includes("services") ? navItemsServices : pathName.includes("Legales") ? navItemsTextos : navItemsHome;
   return (
     <nav className="offcanvas__menu">
       <ul className="offcanvas__menu_ul">

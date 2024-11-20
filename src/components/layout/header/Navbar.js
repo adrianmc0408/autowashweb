@@ -29,11 +29,13 @@ import DropdownPages from "./DropdownPages";
 import DropdownEcommerce from "./DropdownEcommerce";
 import NavItem from "./NavItem";
 import { useHeaderContex } from "@/providers/HeaderContex";
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const { isOnepage, style, headerType, footerStyle, isCollection, home } =
     useHeaderContex();
-  const navItemsRaw = [
+  const pathName = usePathname();
+  const navItemsHome = [
     {
       name: "Inicio",
       icon: false,
@@ -54,10 +56,70 @@ const Navbar = () => {
       path: "#contacto",
       dropdown: null,
       position: "static",
+    },
+    {
+      name: "Galería",
+      icon: false,
+      path: "/services/galeria",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Textos legales",
+      icon: false,
+      path: "/textosLegales",
+      dropdown: null,
+      position: "static",
+    },
+  ]
+  const navItemsServices = [
+    {
+      name: "Inicio",
+      icon: false,
+      path: "/",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Limpieza de coches",
+      icon: false,
+      path: "/services/limpiezaCoches",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Limpieza de sofás",
+      icon: false,
+      path: "/services/limpiezaSofas",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Galería",
+      path: "/services/galeria",
+      dropdown: null,
+      position: "static",
+    },
+    {
+      name: "Textos legales",
+      icon: false,
+      path: "/textosLegales",
+      dropdown: null,
+      position: "static",
+    },
+  ]
+  const navItemsTextos = [
+    {
+      name: "Inicio",
+      icon: false,
+      path: "/",
+      dropdown: null,
+      position: "static",
     }
   ]
+  const navItemsRaw = pathName.includes("services") ? navItemsServices : pathName.includes("Legales") ? navItemsTextos : navItemsHome;
 
-  const navItems = navItemsRaw?.map((navItem, idx) =>
+  const navItems = navItemsRaw?.map((navItem, idx) => 
   ({
     ...navItem,
     dropdown: isOnepage ? null : (
