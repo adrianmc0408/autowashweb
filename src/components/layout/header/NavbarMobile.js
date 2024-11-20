@@ -90,7 +90,7 @@ const NavbarMobile = () => {
       position: "static",
     }
   ]
-  const mobileItems = pathName.includes("services") ? navItemsServices : pathName.includes("Legales") ? navItemsTextos : navItemsHome;
+  const mobileItems = pathName.includes("services") || pathName.includes("Legales") ? navItemsServices : navItemsHome;
   return (
     <nav className="offcanvas__menu">
       <ul className="offcanvas__menu_ul">

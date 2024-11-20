@@ -117,9 +117,9 @@ const Navbar = () => {
       position: "static",
     }
   ]
-  const navItemsRaw = pathName.includes("services") ? navItemsServices : pathName.includes("Legales") ? navItemsTextos : navItemsHome;
+  const navItemsRaw = pathName.includes("services") || pathName.includes("Legales") ? navItemsServices : navItemsHome;
 
-  const navItems = navItemsRaw?.map((navItem, idx) => 
+  const navItems = navItemsRaw?.map((navItem, idx) =>
   ({
     ...navItem,
     dropdown: isOnepage ? null : (
